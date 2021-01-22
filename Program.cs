@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Hello
@@ -36,6 +37,18 @@ namespace Hello
             installer.Install();
 
             Car car = new Car("Limosine");
+
+            Text text = new Text();
+            Shape shape = text;
+
+            Stack stack = new Stack();
+            stack.Push(1);
+
+            OracleConnection oracle = new OracleConnection("Oracle");
+            oracle.OpenConnection();
+
+            DbMigrator migrator = new DbMigrator(new ConsoleLogger());
+            migrator.Migrate();
         }
     }
 }

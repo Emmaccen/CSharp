@@ -6,7 +6,7 @@ namespace Hello
 {
     class Vehicle
     {
-        private string Name { get; set; }
+        private readonly string Name;
 
         public Vehicle(string name)
         {
