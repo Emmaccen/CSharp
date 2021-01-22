@@ -52,6 +52,13 @@ namespace Hello
             migrator.Migrate();
             DbMigrator migrator2 = new DbMigrator(new FileLogger(@"D:\fileLog.txt"));
             migrator2.Migrate();
+
+            WorkflowEngine workflowEngine = new WorkflowEngine();
+            ApiBuilder builder = new ApiBuilder();
+            RequestController controller = new RequestController();
+            workflowEngine.AddWorkflow(builder);
+            workflowEngine.AddWorkflow(controller);
+            workflowEngine.Run();
         }
     }
 }
