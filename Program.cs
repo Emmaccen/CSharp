@@ -46,9 +46,12 @@ namespace Hello
 
             OracleConnection oracle = new OracleConnection("Oracle");
             oracle.OpenConnection();
+            oracle.DoSomething();
 
             DbMigrator migrator = new DbMigrator(new ConsoleLogger());
             migrator.Migrate();
+            DbMigrator migrator2 = new DbMigrator(new FileLogger(@"D:\fileLog.txt"));
+            migrator2.Migrate();
         }
     }
 }

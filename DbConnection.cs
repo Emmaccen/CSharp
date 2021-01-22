@@ -22,5 +22,9 @@ namespace Hello
         }
         public abstract void OpenConnection();
         public abstract void CloseConnection();
+        public void DoSomething()
+        {
+            Console.WriteLine("implementation details");
+        }
     }
 }

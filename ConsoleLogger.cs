@@ -8,6 +8,8 @@ namespace Hello
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(errorMessage);
+            //reset back to white
+            Console.ForegroundColor = (ConsoleColor)15;
         }
 
         public void InfoLog(string message)
